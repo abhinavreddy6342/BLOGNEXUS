@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: blognexus-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: blognexus
+      POSTGRES_PASSWORD: blognexus123
+      POSTGRES_DB: blognexus_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - blognexus_postgres_data:/var/lib/postgresql/data
+
+volumes:
+  blognexus_postgres_data:
