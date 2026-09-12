@@ -15,7 +15,7 @@ from app.routers.bookmarks import router as bookmarks_router
 from app.routers.categories import router as categories_router
 
 
-# Create database tables when the application starts.
+# Create database tables.
 Base.metadata.create_all(bind=engine)
 
 
@@ -26,17 +26,16 @@ app = FastAPI(
 )
 
 
-# ------------------------------------------------------------------
+# ---------------------------------------------------------
 # CORS
-# ------------------------------------------------------------------
+# ---------------------------------------------------------
 
-# Local frontend for development.
 allowed_origins = [
     "http://localhost:5173",
+    "https://blognexus-ruddy.vercel.app",
 ]
 
-# Optional production frontend URL.
-# We will set FRONTEND_URL on Render after deploying the frontend.
+# Optional environment-based frontend URL.
 frontend_url = os.getenv("FRONTEND_URL")
 
 if frontend_url:
@@ -55,9 +54,9 @@ app.add_middleware(
 )
 
 
-# ------------------------------------------------------------------
+# ---------------------------------------------------------
 # ROUTES
-# ------------------------------------------------------------------
+# ---------------------------------------------------------
 
 app.include_router(auth_router)
 app.include_router(posts_router)
