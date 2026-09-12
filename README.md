@@ -22,16 +22,6 @@ https://blognexus-ruddy.vercel.app/
 **Live API:**  
 https://blognexus-api.onrender.com
 
-### 📚 API Documentation
-
-**Swagger Documentation:**  
-https://blognexus-api.onrender.com/docs
-
-### 💻 Source Code
-
-**GitHub Repository:**  
-https://github.com/abhinavreddy6342/BLOGNEXUS
-
 ---
 
 # 🚀 About BLOGNEXUS
@@ -81,7 +71,7 @@ Authenticated users can manage their own content while protected backend operati
 
 # ✍️ Story Management
 
-BLOGNEXUS provides complete CRUD functionality for stories.
+The platform provides complete CRUD functionality for stories.
 
 ### Create Stories
 
