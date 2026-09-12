@@ -1,269 +1,117 @@
-# BLOGNEXUS
+# ✨ BLOGNEXUS
 
-### A Modern Full-Stack Blogging & Community Platform
+### Modern Full-Stack Blogging & Community Platform
 
-BLOGNEXUS is a full-stack blogging and community platform designed to give users a modern space to create, publish, discover, and interact with stories.
+**BLOGNEXUS** is a full-stack blogging and community platform built for creating, publishing, discovering, and interacting with stories through a modern and responsive web experience.
 
-The platform combines a responsive frontend, secure authentication, RESTful backend services, PostgreSQL database integration, and community engagement features into one complete application.
+The application combines a React frontend, FastAPI backend, PostgreSQL database, JWT authentication, REST APIs, content management, search, categories, likes, comments, bookmarks, profile management, and cloud deployment into one complete software product.
 
 > **Create. Publish. Discover. Connect.**
 
 ---
 
-## 🚀 Live Project
+## 🌐 Live Application
 
-**Live Demo:** Coming Soon
+### 🚀 Frontend
+
+**Live Website:**  
+https://blognexus-ruddy.vercel.app/
+
+### ⚡ Backend
+
+**Live API:**  
+https://blognexus-api.onrender.com
+
+### 📚 API Documentation
+
+**Swagger Documentation:**  
+https://blognexus-api.onrender.com/docs
+
+### 💻 Source Code
 
 **GitHub Repository:**  
 https://github.com/abhinavreddy6342/BLOGNEXUS
 
 ---
 
-## ✨ Features
+# 🚀 About BLOGNEXUS
 
-### 🔐 Authentication
+BLOGNEXUS was designed and developed as a complete full-stack blogging platform with a focus on practical software engineering, clean architecture, secure authentication, database integration, responsive user experience, and community interaction.
+
+The platform allows users to:
+
+- Create an account
+- Sign in securely
+- Create stories
+- Publish stories
+- Edit their own stories
+- Delete their own stories
+- Explore published stories
+- Search stories
+- Filter stories by category
+- Like stories
+- Comment on stories
+- Bookmark stories
+- Manage their profile
+- View their published stories
+- Manage their own content
+
+BLOGNEXUS is designed around the complete content lifecycle rather than functioning as a simple static blogging interface.
+
+---
+
+# 🌟 Core Features
+
+## 🔐 Authentication & Authorization
+
+BLOGNEXUS includes a complete authentication and authorization system.
 
 - User registration
 - Secure login
 - JWT-based authentication
-- Persistent login sessions
+- Persistent authentication state
 - Protected user actions
+- Authenticated API requests
 - Logout functionality
+- Ownership-based authorization
 
-### 👤 User Profiles
-
-- Personal profile dashboard
-- Editable username
-- Editable biography
-- Published story statistics
-- Personal story collection
-- Profile activity overview
-
-### ✍️ Story Management
-
-- Create and publish stories
-- View individual stories
-- Edit published stories
-- Delete your own stories
-- Organize stories by category
-- Personal story management
-
-### 🔎 Explore & Discovery
-
-- Browse published stories
-- Search stories by title and content
-- Filter stories by category
-- Featured stories
-- Latest stories
-- Category-based browsing
-
-### ❤️ Community Interaction
-
-- Like stories
-- Remove likes
-- Add comments
-- Delete your own comments
-- Bookmark stories
-- Manage saved stories
-
-### 🎨 User Experience
-
-- Responsive interface
-- Dark futuristic visual design
-- Glass-style content cards
-- Smooth page animations
-- Interactive hover effects
-- Mobile-friendly navigation
-- Loading states
-- Error handling
-- Consistent visual system
+Authenticated users can manage their own content while protected backend operations prevent unauthorized modifications.
 
 ---
 
-# 🧠 Application Flow
+# ✍️ Story Management
+
+BLOGNEXUS provides complete CRUD functionality for stories.
+
+### Create Stories
+
+Users can create stories using:
+
+- Story title
+- Story content
+- Category selection
+
+### Manage Stories
+
+Users can:
+
+- View stories
+- Edit their own stories
+- Delete their own stories
+- Manage published content from their profile
+- Open dedicated story detail pages
+
+### Story Lifecycle
 
 ```text
-                    BLOGNEXUS
-                        │
-                        ▼
-                User Registration
-                        │
-                        ▼
-                      Login
-                        │
-            ┌───────────┴───────────┐
-            ▼                       ▼
-         Explore                 Profile
-            │                       │
-            ▼                       ▼
-       Read Stories           Your Stories
-            │                       │
-      ┌─────┼─────┐           ┌─────┴─────┐
-      ▼     ▼     ▼           ▼           ▼
-     Like Comment Bookmark   Edit        Delete
-
-
-🏗️ System Architecture
-┌──────────────────────────────────────────────┐
-│                 BLOGNEXUS                    │
-│                                              │
-│              React Frontend                  │
-│                                              │
-│  Pages • Components • Routing • API Client  │
-└──────────────────────┬───────────────────────┘
-                       │
-                       │ REST API
-                       ▼
-┌──────────────────────────────────────────────┐
-│              FastAPI Backend                 │
-│                                              │
-│ Authentication • Posts • Users              │
-│ Comments • Likes • Bookmarks • Categories   │
-└──────────────────────┬───────────────────────┘
-                       │
-                       │ SQLAlchemy
-                       ▼
-┌──────────────────────────────────────────────┐
-│                  PostgreSQL                  │
-│                                              │
-│ Users • Posts • Comments • Likes            │
-│ Bookmarks • Categories                      │
-└──────────────────────────────────────────────┘
-
-🛠️ Technology Stack
-Frontend
-React
-JavaScript
-React Router
-Tailwind CSS
-Framer Motion
-Axios
-Lucide Icons
-Backend
-Python
-FastAPI
-SQLAlchemy
-Pydantic
-RESTful API
-JWT Authentication
-Passlib
-bcrypt
-Database
-PostgreSQL
-Development & Deployment
-Git
-GitHub
-Docker
-Render
-Vercel / Netlify
-
-📂 Project Structure
-
-BLOGNEXUS/
-│
-├── backend/
-│   │
-│   ├── app/
-│   │   ├── core/
-│   │   │   └── security.py
-│   │   │
-│   │   ├── db/
-│   │   │   └── database.py
-│   │   │
-│   │   ├── models/
-│   │   │   ├── bookmark.py
-│   │   │   ├── category.py
-│   │   │   ├── comment.py
-│   │   │   ├── like.py
-│   │   │   ├── post.py
-│   │   │   └── user.py
-│   │   │
-│   │   ├── routers/
-│   │   │   ├── auth.py
-│   │   │   ├── bookmarks.py
-│   │   │   ├── categories.py
-│   │   │   ├── comments.py
-│   │   │   ├── likes.py
-│   │   │   ├── posts.py
-│   │   │   └── users.py
-│   │   │
-│   │   ├── schemas/
-│   │   │   ├── auth.py
-│   │   │   ├── bookmark.py
-│   │   │   ├── category.py
-│   │   │   ├── comment.py
-│   │   │   ├── like.py
-│   │   │   ├── post.py
-│   │   │   └── user.py
-│   │   │
-│   │   └── main.py
-│   │
-│   ├── requirements.txt
-│   └── .env
-│
-├── frontend/
-│   │
-│   ├── public/
-│   │
-│   └── src/
-│       ├── assets/
-│       ├── components/
-│       │   ├── PostCard.jsx
-│       │   └── Snowfall.jsx
-│       │
-│       ├── context/
-│       │   └── AuthContext.jsx
-│       │
-│       ├── layouts/
-│       │   └── MainLayout.jsx
-│       │
-│       ├── pages/
-│       │   ├── About.jsx
-│       │   ├── Bookmarks.jsx
-│       │   ├── Categories.jsx
-│       │   ├── CreatePost.jsx
-│       │   ├── EditPost.jsx
-│       │   ├── Explore.jsx
-│       │   ├── Home.jsx
-│       │   ├── Login.jsx
-│       │   ├── MyPosts.jsx
-│       │   ├── PostDetails.jsx
-│       │   ├── Profile.jsx
-│       │   └── Register.jsx
-│       │
-│       ├── services/
-│       │   └── api.js
-│       │
-│       ├── App.jsx
-│       ├── index.css
-│       └── main.jsx
-│
-├── docker-compose.yml
-├── .gitignore
-└── README.md
-
-🔑 Core Modules
-
-Module	Responsibility
-Authentication	Registration, login, and session management
-Users	Profile management and user information
-Posts	Story creation, retrieval, editing, and deletion
-Categories	Story organization and filtering
-Comments	Community discussion
-Likes	Story engagement
-Bookmarks	Saved story management
-Explore	Search and content discovery
-
-🔒 Security
-
-BLOGNEXUS implements application-level security practices including:
-
-JWT-based authentication
-Password hashing
-Protected API endpoints
-Authenticated user actions
-Ownership validation for story editing
-Ownership validation for story deletion
-Server-side request validation
-Environment-based configuration
-CORS configuration
+Create Story
+     ↓
+Publish
+     ↓
+View Story
+     ↓
+Like / Comment / Bookmark
+     ↓
+Edit
+     ↓
+Delete
