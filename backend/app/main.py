@@ -15,7 +15,6 @@ from app.routers.bookmarks import router as bookmarks_router
 from app.routers.categories import router as categories_router
 
 
-# Create database tables.
 Base.metadata.create_all(bind=engine)
 
 
@@ -32,14 +31,12 @@ app = FastAPI(
 
 allowed_origins = [
     "http://localhost:5173",
-    "https://blognexus-ruddy.vercel.app",
 ]
 
-# Optional environment-based frontend URL.
 frontend_url = os.getenv("FRONTEND_URL")
 
 if frontend_url:
-    frontend_url = frontend_url.rstrip("/")
+    frontend_url = frontend_url.strip().rstrip("/")
 
     if frontend_url not in allowed_origins:
         allowed_origins.append(frontend_url)
